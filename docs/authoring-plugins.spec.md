@@ -524,6 +524,14 @@ Author a guide only where the language needs its own wording; otherwise the smel
 falls back to the generic guide, or the `uncoached.md` default. Keep prompts short
 and outcome-focused — use the `habit-hooks-prompting` skill's ROSE pattern.
 
+Keep plugin changes local:
+
+- Avoid duplicating prompt files from `generic`; reuse its guide unless the
+  language genuinely needs different coaching. Raise a framework change instead
+  when the difference is only formatting.
+- Avoid modifying the core unless the framework change has been agreed with the
+  maintainers first.
+
 ### A plugin's own `[runners]` runs its guide with no project config
 
 A plugin's `[runners]` is merged into the run (project last), so a
