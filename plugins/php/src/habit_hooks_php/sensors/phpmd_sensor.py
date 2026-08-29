@@ -92,9 +92,6 @@ def findings(entries: list[dict]) -> list[dict]:
 
 def main() -> int:
     php, files = sys.argv[1], sys.argv[2:]
-    if not files:
-        print("[]")
-        return 0
     result = run_phpmd(php, files)
     if result.returncode not in SUCCESS_EXIT_CODES:
         sys.stderr.write(result.stderr or result.stdout)
