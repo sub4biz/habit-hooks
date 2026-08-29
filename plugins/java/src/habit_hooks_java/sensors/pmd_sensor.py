@@ -131,9 +131,6 @@ def findings(entries: list[dict]) -> list[dict]:
 
 def main() -> int:
     pmd, argv = sys.argv[1], sys.argv[2:]
-    if not argv:
-        print("[]")
-        return 0
     pmd_args, files = split_argv(argv)
     ruleset, remaining_args = ruleset_of(pmd_args, Path.cwd())
     file_args = [token for file in files for token in ("-d", file)]
